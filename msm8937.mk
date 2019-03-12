@@ -154,7 +154,7 @@ PRODUCT_COPY_FILES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.0-service \
+    android.hardware.biometrics.fingerprint@2.0-service-custom \
     fingerprint.msm8937
 
 # FM
