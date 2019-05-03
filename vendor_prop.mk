@@ -205,3 +205,8 @@ ro.vendor.qti.sys.fw.use_trim_settings=true
 # Wi-Fi
 PRODUCT_PROPERTY_OVERRIDES += \
 wifi.interface=wlan0
+
+# SurfaceFlinger
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.protected_contents=true
+
