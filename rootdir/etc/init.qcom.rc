@@ -396,6 +396,9 @@ on post-fs-data
     write /data/vendor/radio/copy_complete 0
     chown radio radio /data/vendor/radio/copy_complete
     chmod 0660 /data/vendor/radio/copy_complete
+	
+    # Legacy ril-daemon is now disabled by default
+    enable ril-daemon
 
     # copy prebuilt qcril.db files always
     copy /vendor/radio/qcril_database/qcril.db /data/vendor/radio/qcril_prebuilt.db
