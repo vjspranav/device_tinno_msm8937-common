@@ -297,4 +297,14 @@
          or a single SIM device can have 1 phones/logical modems, but 2 physical slots (one eSIM
          and one pSIM) -->
     <integer name="config_num_physical_slots">2</integer>
+
+   <!-- Whether the always on display mode is available. -->
+   <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+
+    <!-- Doze: should the TYPE_PICK_UP_GESTURE or TYPE_TILT_DETECTOR sensor be used as a pulse signal. -->
+    <bool name="config_dozePulsePickup">true</bool>
+
+    <!-- Doze: should the proximity sensor (handwave / pocket mode) be used as a pulse signal. -->
+    <bool name="config_dozePulseProximity">true</bool>
+
 </resources>
