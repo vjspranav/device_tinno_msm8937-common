@@ -290,4 +290,14 @@
 
     <!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
     <bool name="config_cleanupUnusedFingerprints">false</bool>
+
+   <!-- Whether the always on display mode is available. -->
+   <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+
+    <!-- Doze: should the TYPE_PICK_UP_GESTURE or TYPE_TILT_DETECTOR sensor be used as a pulse signal. -->
+    <bool name="config_dozePulsePickup">true</bool>
+
+    <!-- Doze: should the proximity sensor (handwave / pocket mode) be used as a pulse signal. -->
+    <bool name="config_dozePulseProximity">true</bool>
+
 </resources>
