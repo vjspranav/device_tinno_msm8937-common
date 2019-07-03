@@ -1,0 +1,5 @@
+allow system_server mnt_vendor_file:dir { getattr search };
+allow system_server sensors_persist_file:dir { getattr search };
+allow system_server sensors_persist_file:file { read open };
+allow system_server init:binder { call transfer }; 
+

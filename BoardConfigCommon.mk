@@ -222,5 +222,7 @@ WIFI_DRIVER_FW_PATH_AP           := "ap"
 WIFI_DRIVER_FW_PATH_STA          := "sta"
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 
+TARGET_SEPOLICY_DIR := msm8937
+
 # Inherit from the proprietary version
 -include vendor/tinno/msm8937-common/BoardConfigVendor.mk
