@@ -1,0 +1,2 @@
+allow init object_r:filesystem { relabelto };
+allow init object_r:file { setattr };

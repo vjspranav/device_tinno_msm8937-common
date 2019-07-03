@@ -1,0 +1,1 @@
+allow healthd object_r:file { read };
