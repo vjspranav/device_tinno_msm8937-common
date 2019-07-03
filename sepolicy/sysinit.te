@@ -1,0 +1,5 @@
+#allow sysinit shell_exec:file { getattr read };
+#allow sysinit system_file:dir { read open };
+#allow sysinit toolbox_exec:file { read open getattr execute execute_no_trans };
+#allow sysinit system_file:file execute_no_trans;
+

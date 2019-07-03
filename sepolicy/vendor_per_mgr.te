@@ -1,0 +1,2 @@
+allow vendor_per_mgr vendor_per_mgr:capability net_raw;
+

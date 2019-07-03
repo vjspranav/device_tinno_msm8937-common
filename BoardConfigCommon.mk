@@ -43,7 +43,7 @@ TARGET_NO_BOOTLOADER := true
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlycon=msm_hsl_uart,0x78B0000
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 2048
@@ -192,6 +192,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(LOCAL_PATH)/sepolicy/private
 
 # Telephony Jar
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
@@ -220,6 +222,8 @@ TARGET_DISABLE_WCNSS_CONFIG_COPY := true
 WIFI_DRIVER_FW_PATH_AP           := "ap"
 WIFI_DRIVER_FW_PATH_STA          := "sta"
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
+
+TARGET_SEPOLICY_DIR := msm8937
 
 # Inherit from the proprietary version
 -include vendor/tinno/msm8937-common/BoardConfigVendor.mk
