@@ -1,2 +1,0 @@
-allow vendor_init object_r:dir { write search setattr };
-allow vendor_init object_r:lnk_file { setattr };

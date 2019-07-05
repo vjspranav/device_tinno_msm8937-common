@@ -1,1 +1,1 @@
-allow sensors sensors:capability { dac_override };
+allow sensors sensors:capability dac_override;
