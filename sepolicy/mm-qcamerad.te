@@ -1,0 +1,2 @@
+allow mm-qcamerad servicemanager:binder call;
+allow mm-qcamerad camera_data_file:dir search;

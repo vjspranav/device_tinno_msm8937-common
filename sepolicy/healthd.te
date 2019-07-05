@@ -1,1 +1,1 @@
-#allow healthd object_r:file read;
+allow healthd sysfs:file { read open getattr };
