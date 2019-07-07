@@ -4,4 +4,4 @@ allow init sysfs:file setattr;
 allow init vendor_file:file execute_no_trans;
 allow init servicemanager:binder { call transfer };
 allow init gx_fpd_device:chr_file write;
-
+allow init default_android_service:service_manager add;

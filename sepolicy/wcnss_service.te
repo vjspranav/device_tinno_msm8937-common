@@ -1,2 +1,2 @@
-allow wcnss_service serialno_prop:file { read open };
+allow wcnss_service serialno_prop:file { read open getattr };
 
