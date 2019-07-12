@@ -20,5 +20,5 @@ allow goodix hal_fingerprint_default:binder call;
 allow goodix ion_device:chr_file { read ioctl open };
 allow goodix system_prop:property_service set;
 allow goodix vfat:dir search;
-allow goodix vfat:file { read open write };
+allow goodix vfat:file { read open write getattr };
 
