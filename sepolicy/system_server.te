@@ -3,3 +3,6 @@ allow system_server sensors_persist_file:dir { getattr search };
 allow system_server sensors_persist_file:file { read open };
 allow system_server init:binder { call transfer }; 
 
+# Allow system server access to goodix daemon
+binder_call(system_server, goodix);
+allow system_server goodix_service:service_manager find; 
