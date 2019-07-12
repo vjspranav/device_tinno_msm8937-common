@@ -27,5 +27,6 @@ allow init ion_device:chr_file { ioctl read open };
 allow init device:chr_file { ioctl read write open };
 allow init system_server:binder { call transfer };
 allow init system_data_file:file getattr;
+allow init system_file:file { relabelfrom relabelto };
 allow init init:binder { call transfer };
 
