@@ -17,7 +17,7 @@ allow hal_fingerprint_default init:unix_stream_socket connectto ;
 
 allow hal_fingerprint_default system_prop:property_service set;
 
-allow hal_fingerprint_default fingerprintd_data_file:dir { read open write add_name remove_name };
+allow hal_fingerprint_default fingerprintd_data_file:dir { read open write search add_name remove_name };
 
 allow hal_fingerprint_default fingerprintd_data_file:file unlink;
 
@@ -30,4 +30,3 @@ allow hal_fingerprint_default goodix_data_file:file write;
 allow hal_fingerprint_default vfat:file { read open getattr };
 
 allow hal_fingerprint_default vfat:dir search;
-
