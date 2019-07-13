@@ -463,6 +463,12 @@ on post-fs-data
     chown system system /sys/silead/fp_wake_lock
     chown system system /sys/silead/fp_wake_unlock
 
+    # Goodix FPC
+    mkdir /data/goodix 0700 system system
+    chmod 2770 /data/goodix
+    mkdir /data/system/fingerprint 0770 system system
+    chmod 2770 /data/system/fingerprint
+
     # Goodix
     mkdir /data/system/fingerprint 0770 root system
     restorecon_recursive /data/system/fingerprint  
@@ -721,18 +727,17 @@ service gx_fpd /vendor/bin/gx_fpd
     user root
     group root system
     oneshot
+    on property:persist.sys.fp.goodix=0
+    stop gx_fpd
+    on property:persist.sys.fp.goodix=1
+    start gx_fpd
+
 
 service fpsvcd /vendor/bin/fpsvcd_ca_qsee –uuid 08010000000000000000000000000000
     class main
     user root
     group root system
     oneshot
-
-on property:persist.sys.fp.goodix=0
-    stop gx_fpd
-
-on property:persist.sys.fp.goodix=1
-    start gx_fpd
 
 on property:persist.sys.fp.silead=0
     stop fpsvcd

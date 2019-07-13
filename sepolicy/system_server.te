@@ -5,6 +5,6 @@ allow system_server init:binder { call transfer };
 
 allow system_server sdcardfs:file { read open };
 
-# Allow system server access to goodix daemon
-binder_call(system_server, goodix);
-allow system_server goodix_service:service_manager find; 
+# Allow system server access to gx_fpd daemon
+binder_call(system_server, gx_fpd);
+allow system_server gx_fpd_service:service_manager find; 

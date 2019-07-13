@@ -1,6 +1,6 @@
 add_service(hal_fingerprint_default, fingerprintd_custom_service);
-binder_call(hal_fingerprint_default, goodix);
-allow hal_fingerprint_default goodix_service:service_manager find;
+binder_call(hal_fingerprint_default, gx_fpd);
+allow hal_fingerprint_default gx_fpd_service:service_manager find;
 allow hal_fingerprint_default servicemanager:binder { call transfer };
 allow hal_fingerprint_default fingerprintd_custom_service:service_manager { add find };
 allow hal_fingerprint_default elan_device:chr_file { read write ioctl open };
@@ -23,9 +23,9 @@ allow hal_fingerprint_default fingerprintd_data_file:file unlink;
 
 allow hal_fingerprint_default fingerprint_service:service_manager find;
 
-allow hal_fingerprint_default goodix:binder { transfer call };
+allow hal_fingerprint_default gx_fpd:binder { transfer call };
 
-allow hal_fingerprint_default goodix_data_file:file write;
+allow hal_fingerprint_default gx_fpd_data_file:file write;
 
 allow hal_fingerprint_default vfat:file { read open getattr };
 

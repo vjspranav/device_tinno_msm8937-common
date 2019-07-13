@@ -1,6 +1,6 @@
-allow servicemanager goodix:dir search;
-allow servicemanager goodix:file { read open };
-allow servicemanager goodix:process getattr;
+allow servicemanager gx_fpd:dir search;
+allow servicemanager gx_fpd:file { read open };
+allow servicemanager gx_fpd:process getattr;
 allow servicemanager mm-qcamerad:dir search;
 allow servicemanager mm-qcamerad:file { read open };
 allow servicemanager mm-qcamerad:process getattr;

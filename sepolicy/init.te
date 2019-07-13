@@ -3,7 +3,7 @@ allow init proc:file { open read getattr};
 allow init sysfs:file setattr;
 allow init vendor_file:file execute_no_trans;
 allow init servicemanager:binder { call transfer };
-allow init goodix_device:chr_file { write ioctl };
+allow init gx_fpd_device:chr_file { write ioctl };
 allow init default_android_service:service_manager { add find };
 allow init tee_device:chr_file { read open write ioctl };
 allow init hwservicemanager:binder { call transfer };
