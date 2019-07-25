@@ -30,7 +30,6 @@ allow untrusted_app service_contexts_file:file getattr;
 allow untrusted_app mnt_vendor_file:dir getattr;
 allow untrusted_app cgroup:dir { read open };
 allow untrusted_app mnt_media_rw_file:dir getattr;
-allow untrusted_app mnt_product_file:dir getattr;
 allow untrusted_app tmpfs:dir { read open write };
 allow untrusted_app video_device:chr_file getattr;
 allow untrusted_app proc:file getattr;
