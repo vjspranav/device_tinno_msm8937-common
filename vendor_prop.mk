@@ -54,6 +54,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 bluetooth.hfp.client=1 \
 persist.bt.enable.multicast=1 \
 persist.bt.max.a2dp.connections=2 \
+persist.bluetooth.bluetooth_audio_hal.disabled=true \
 ro.qualcomm.bt.hci_transport=smd \
 ro.bluetooth.hfp.ver=1.7 \
 vendor.qcom.bluetooth.soc=smd
