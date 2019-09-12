@@ -202,11 +202,6 @@ endif
 # Telephony Jar
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
-# System as root
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-BOARD_KERNEL_CMDLINE += skip_initramfs rootwait ro init=/init root=/dev/dm-0
-BOARD_KERNEL_CMDLINE += dm=\"system none ro,0 1 android-verity /dev/sde43\"
-
 # Treble
 TARGET_COPY_OUT_VENDOR := system/vendor
 
