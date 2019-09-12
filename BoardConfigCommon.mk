@@ -197,6 +197,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 #include device/qcom/sepolicy/sepolicy.mk
 #BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
 #TARGET_SEPOLICY_DIR := msm8937
+BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy_tmp
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
 SELINUX_IGNORE_NEVERALLOWS := true
