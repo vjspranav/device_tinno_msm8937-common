@@ -700,14 +700,14 @@ service time_daemon /vendor/bin/time_daemon
     group root
     writepid /dev/cpuset/system-background/tasks
 
-service gx_fpd /vendor/bin/gx_fpd
-    class main
-    user root
-    group root system
-    oneshot
+#service gx_fpd /vendor/bin/gx_fpd
+#    class main
+#    user root
+#    group root system
+#    oneshot
 
-on property:persist.sys.fp.goodix=0
-    stop gx_fpd
+#on property:persist.sys.fp.goodix=0
+#    stop gx_fpd
 
-on property:persist.sys.fp.goodix=1
-    start gx_fpd
+#on property:persist.sys.fp.goodix=1
+#    start gx_fpd
