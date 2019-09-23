@@ -40,9 +40,6 @@ on early-init
     write /proc/sys/vm/page-cluster 0
 
 on init
-    # Set permissions for persist partition
-    mkdir /persist 0771 root system
-
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
@@ -700,14 +697,14 @@ service time_daemon /vendor/bin/time_daemon
     group root
     writepid /dev/cpuset/system-background/tasks
 
-#service gx_fpd /vendor/bin/gx_fpd
-#    class main
-#    user root
-#    group root system
-#    oneshot
+service gx_fpd /vendor/bin/gx_fpd
+    class main
+    user root
+    group root system
+    oneshot
 
-#on property:persist.sys.fp.goodix=0
-#    stop gx_fpd
+on property:persist.sys.fp.goodix=0
+    stop gx_fpd
 
-#on property:persist.sys.fp.goodix=1
-#    start gx_fpd
+on property:persist.sys.fp.goodix=1
+    start gx_fpd
