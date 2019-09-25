@@ -193,6 +193,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # RIL
 TARGET_RIL_VARIANT := caf
 
+# SELinux
+include device/qcom/sepolicy-legacy-um/sepolicy.mk
+
 # Telephony Jar
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
