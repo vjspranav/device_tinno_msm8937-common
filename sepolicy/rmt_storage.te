@@ -1,0 +1,2 @@
+allow rmt_storage sysfs:file { read };
+allow rmt_storage sysfs:file { open };
