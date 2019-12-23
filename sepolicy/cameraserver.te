@@ -1,2 +1,3 @@
 allow cameraserver mm-qcamerad:unix_dgram_socket sendto;
 allow cameraserver hal_perf_hwservice:hwservice_manager find;
+allow cameraserver hal_perf_default:binder { call };

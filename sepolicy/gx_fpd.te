@@ -21,3 +21,4 @@ allow gx_fpd ion_device:chr_file { read ioctl open };
 allow gx_fpd system_prop:property_service set;
 allow gx_fpd vfat:dir search;
 allow gx_fpd vfat:file { read open write getattr };
+allow gx_fpd tmp_root_mount_file:dir { search };
