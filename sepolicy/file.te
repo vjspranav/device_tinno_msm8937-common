@@ -1,4 +1,4 @@
-type gx_fpd_data_file, file_type, data_file_type;
+type gx_fpd_data_file, file_type, data_file_type, core_data_file_type;
 type nv_data_file, file_type;
 type tmp_root_mount_file, file_type;
 
