@@ -54,10 +54,27 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_allow_deflect_ims_call_bool" value="false" />
         <boolean name="carrier_rtt_supported" value="false" />
         <boolean name="carrier_rtt_auto_upgrade" value="false" />
-        <boolean name="carrier_rtt_supported_on_vtcalls" value="false" />
-        <boolean name="carrier_rtt_upgrade_supported" value="false" />
-        <boolean name="carrier_rtt_downgrade_supported" value="false" />
-        <boolean name="emergency_sms_support_bool" value="false" />
+        <boolean name="carrier_rtt_supported_on_vtcalls" value="false"/>
+        <boolean name="carrier_rtt_upgrade_supported" value="false"/>
+        <boolean name="carrier_rtt_downgrade_supported" value="false"/>
+        <boolean name="show_rtt_visibility_setting_bool" value="false" />
+        <boolean name="rtt_always_enabled_bool" value="false" />
+
+        <!-- HD/VOLTE icon support -->
+        <boolean name="config_update_service_status" value="false"/>
+        <boolean name="config_update_volte_icon" value="false"/>
+
+        <boolean name="auto_retry_failed_wifi_emergency_call" value="true" />
+
+        <!-- Config to allow hold in video calls -->
+        <boolean name="allow_holding_video_call" value="true"/>
+        <!-- Config to allow accept one way for video calls -->
+        <boolean name="allow_one_way_accept_video_call" value="true"/>
+
+        <!-- show for all -->
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="001" mnc="01">
         <boolean name="carrier_vt_available_bool" value="true" />
