@@ -711,3 +711,6 @@ on property:persist.sys.fp.goodix=0
 
 on property:persist.sys.fp.goodix=1
     start gx_fpd
+
+on property:dev.bootcomplete=1
+    restart ril-daemon
